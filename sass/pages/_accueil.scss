@@ -4,11 +4,11 @@
   background-color: $gray;
   form {
     padding: 10px 0;
-    @include gradiant;
+    background: linear-gradient(180deg, $gray-border 5%, $dark-gray 5%);
     input {
       border: none;
       padding: 10px 0;
-      @include gradiant;
+      background-color: $dark-gray;
     }
   }
   div {
@@ -29,8 +29,24 @@
   }
 }
 
-.functionning {
-  padding: 20px;
+.functioning {
+  padding: 30px 20px;
+  li {
+    line-height: 3.2rem;
+    border: 1px solid $gray;
+    border-radius: 30px;
+    background-color: $gray;
+  }
+}
+
+.fa-1,
+.fa-2,
+.fa-3 {
+    border-radius: 30px;
+    padding: 8px;
+    background-color: $primary;
+    color: $white;
+    font-size: 0.6rem;
 }
 
 .restaurants {
