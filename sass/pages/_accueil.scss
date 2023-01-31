@@ -1,0 +1,40 @@
+.search {
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: $gray;
+  form {
+    padding: 10px 0;
+    @include gradiant;
+    input {
+      border: none;
+      padding: 10px 0;
+      @include gradiant;
+    }
+  }
+  div {
+    padding: 30px 0;
+  }   
+  h1 {
+     padding: 0 40px;
+  }
+  p {
+    padding: 0 15px 30px 15px;
+  }
+  a {
+    margin: 20px 0;
+    border-radius: 30px;
+    padding: 15px 20px;
+    background: linear-gradient(180deg, $secondary 0%, $primary 100%);
+    color: $white;
+  }
+}
+
+.functionning {
+  padding: 20px;
+}
+
+.restaurants {
+  padding: 30px 20px 40px 20px;
+  background-color: $gray;
+}
+
