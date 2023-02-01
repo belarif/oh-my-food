@@ -90,21 +90,37 @@ footer a {
 .functioning {
   padding: 30px 20px;
 }
-.functioning li {
-  line-height: 3.2rem;
-  border: 1px solid #F7F7F7;
-  border-radius: 30px;
-  background-color: #F7F7F7;
+.functioning ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.fa-1,
-.fa-2,
-.fa-3 {
+.functioning li {
+  border: 1px solid #F7F7F7;
+  border-radius: 20px;
+  padding: 20px 0;
+  background-color: #F7F7F7;
+  box-shadow: 0 6px 8px #eeeded;
+}
+.functioning li:hover {
+  background-color: #f4eefc;
+}
+.functioning li i {
+  margin-right: 20px;
+}
+.functioning li i:first-child {
+  margin-left: -11px;
   border-radius: 30px;
-  padding: 8px;
+  padding: 6px 7px;
   background-color: #9356DC;
   color: #fff;
   font-size: 0.6rem;
+}
+.functioning li i:nth-child(2) {
+  color: #adaaaa;
+}
+.functioning li i:nth-child(2):hover {
+  color: #9356DC;
 }
 
 .restaurants {
