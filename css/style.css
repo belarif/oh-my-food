@@ -1,1 +1,115 @@
+* {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 600;
+}
 
+h1 {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Shrikhand, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+figure {
+  margin: 0;
+}
+
+body > header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+header img {
+  height: 30px;
+}
+
+footer {
+  padding: 5px 20px;
+  line-height: 1.5rem;
+  color: #fff;
+  background-color: #3a3838;
+}
+footer a {
+  color: #fff;
+}
+
+.search {
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #F7F7F7;
+}
+.search form {
+  padding: 10px 0;
+  background: linear-gradient(180deg, #d5d3d3 5%, #eeeded 5%);
+}
+.search form input {
+  border: none;
+  padding: 10px 0;
+  background-color: #eeeded;
+}
+.search div {
+  padding: 30px 0;
+}
+.search h1 {
+  padding: 0 40px;
+}
+.search p {
+  padding: 0 15px 30px 15px;
+}
+.search a {
+  margin: 20px 0;
+  border-radius: 30px;
+  padding: 15px 20px;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  color: #fff;
+}
+
+.functioning {
+  padding: 30px 20px;
+}
+.functioning li {
+  line-height: 3.2rem;
+  border: 1px solid #F7F7F7;
+  border-radius: 30px;
+  background-color: #F7F7F7;
+}
+
+.fa-1,
+.fa-2,
+.fa-3 {
+  border-radius: 30px;
+  padding: 8px;
+  background-color: #9356DC;
+  color: #fff;
+  font-size: 0.6rem;
+}
+
+.restaurants {
+  padding: 30px 20px 40px 20px;
+  background-color: #F7F7F7;
+}
+
+/*# sourceMappingURL=style.css.map */
