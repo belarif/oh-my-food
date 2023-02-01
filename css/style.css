@@ -102,13 +102,13 @@ footer a {
   background-color: #F7F7F7;
   box-shadow: 0 6px 8px #eeeded;
 }
-.functioning li:hover {
+.functioning li:hover, .functioning li:focus {
   background-color: #f4eefc;
 }
-.functioning li i {
+.functioning i {
   margin-right: 20px;
 }
-.functioning li i:first-child {
+.functioning i:first-child {
   margin-left: -11px;
   border-radius: 30px;
   padding: 6px 7px;
@@ -116,16 +116,51 @@ footer a {
   color: #fff;
   font-size: 0.6rem;
 }
-.functioning li i:nth-child(2) {
+.functioning i:nth-child(2) {
   color: #adaaaa;
 }
-.functioning li i:nth-child(2):hover {
+.functioning i:nth-child(2):hover, .functioning i:nth-child(2):focus {
   color: #9356DC;
 }
 
 .restaurants {
   padding: 30px 20px 40px 20px;
   background-color: #F7F7F7;
+}
+.restaurants ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants li {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 6px #eeeded;
+}
+.restaurants figcaption {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.restaurants img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-height: 170px;
+  object-fit: cover;
+}
+.restaurants h3,
+.restaurants p {
+  margin: 0;
+}
+.restaurants header {
+  line-height: 1.5rem;
+}
+.restaurants i {
+  margin-right: 13px;
+  font-size: 1.6rem;
+}
+.restaurants i:hover, .restaurants i:focus {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
