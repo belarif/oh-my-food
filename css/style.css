@@ -98,6 +98,12 @@ footer i {
   flex-direction: column;
   gap: 20px;
 }
+@media (min-width: 768px) {
+  .functioning ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .functioning li {
   border: 1px solid #F7F7F7;
   border-radius: 20px;
@@ -110,6 +116,11 @@ footer i {
 }
 .functioning i {
   margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .functioning i {
+    margin-right: 10px;
+  }
 }
 .functioning i:first-child {
   margin-left: -11px;

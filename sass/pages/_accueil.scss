@@ -5,7 +5,7 @@
 
   form {
     padding: 10px 0;
-    background: linear-gradient(180deg, $gray-border 5%, $dark-gray 5%);
+    @include gradient($gray-border, 0, $dark-gray, 10%);
 
     input {
       border: none;
@@ -30,7 +30,7 @@
     margin: 20px 0;
     border-radius: 30px;
     padding: 15px 20px;
-    background: linear-gradient(180deg, $secondary 0%, $primary 100%);
+    @include gradient($secondary, 10%, $primary, 100%);
     color: $white;
   }
 }
@@ -42,6 +42,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   li {
@@ -51,6 +56,10 @@
     background-color: $gray;
     box-shadow: 0 6px 8px $dark-gray;
 
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+
     &:hover,
     &:focus {
       background-color: adjust-color($color: $primary, $lightness: 36%)
@@ -59,6 +68,9 @@
 
   i {
     margin-right: 20px;
+    @media (min-width: $tablet) {
+      margin-right: 5px;
+    }
   }
 
   i:first-child {
@@ -86,7 +98,11 @@
   ul {
     display:flex;
     flex-direction: column;
-    gap: 18px;  
+    gap: 18px;
+    
+    @media (min-width: $tablet) {
+      flex-direction: initial;
+    }
   }
 
   li {
@@ -106,6 +122,10 @@
     width: 100%;
     max-height: 170px;
     object-fit: cover;
+
+    @media (min-width: $tablet) {
+      height: 160px;
+    }
   }
 
   h3, 
