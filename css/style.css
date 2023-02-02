@@ -48,9 +48,17 @@ header img {
 
 footer {
   padding: 5px 20px;
-  line-height: 1.5rem;
   color: #fff;
   background-color: #3a3838;
+}
+footer ul {
+  line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 footer a {
   color: #fff;
@@ -66,7 +74,7 @@ footer i {
 }
 .search form {
   padding: 10px 0;
-  background: linear-gradient(180deg, #d5d3d3 5%, #eeeded 5%);
+  background: linear-gradient(#d5d3d3 0, #eeeded 10%);
 }
 .search form input {
   border: none;
@@ -86,7 +94,7 @@ footer i {
   margin: 20px 0;
   border-radius: 30px;
   padding: 15px 20px;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(#FF79DA 10%, #9356DC 100%);
   color: #fff;
 }
 
@@ -111,6 +119,11 @@ footer i {
   background-color: #F7F7F7;
   box-shadow: 0 6px 8px #eeeded;
 }
+@media (min-width: 768px) {
+  .functioning li {
+    width: 100%;
+  }
+}
 .functioning li:hover, .functioning li:focus {
   background-color: #f4eefc;
 }
@@ -119,7 +132,7 @@ footer i {
 }
 @media (min-width: 768px) {
   .functioning i {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 .functioning i:first-child {
@@ -146,6 +159,11 @@ footer i {
   flex-direction: column;
   gap: 18px;
 }
+@media (min-width: 768px) {
+  .restaurants ul {
+    flex-direction: initial;
+  }
+}
 .restaurants li {
   border-radius: 20px;
   background-color: #fff;
@@ -161,6 +179,11 @@ footer i {
   width: 100%;
   max-height: 170px;
   object-fit: cover;
+}
+@media (min-width: 768px) {
+  .restaurants img {
+    height: 160px;
+  }
 }
 .restaurants h3,
 .restaurants p {
