@@ -2,3 +2,8 @@
 @mixin gradient($color-one, $thikness-one, $color-two, $thikness-two) {
   background: linear-gradient($color-one $thikness-one, $color-two $thikness-two);
 }
+
+// shadow
+@mixin shadow($horizontal, $vertical, $softening, $color) {
+    box-shadow: $horizontal $vertical $softening $color;
+}

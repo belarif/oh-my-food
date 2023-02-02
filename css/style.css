@@ -1,203 +1,23 @@
-* {
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 600;
-}
+/* Error: Missing argument $vertical.
+ *   ,--> sass\pages\_accueil.scss
+ * 57|     @include shadow(0 6px 8px $dark-gray);
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *   '
+ *   ,--> sass\utils\_mixins.scss
+ * 7 | @mixin shadow($horizontal, $vertical, $softening, $color) {
+ *   |        ================================================== declaration
+ *   '
+ *   sass\pages\_accueil.scss 57:5  shadow()
+ *   sass\pages\_accueil.scss 57:5  @import
+ *   sass\main.scss 6:9             root stylesheet */
 
-h1 {
-  font-size: 1.6rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Shrikhand, Arial, sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-ul {
-  padding-left: 0;
-}
-
-li {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Missing argument $vertical.\a   \250c \2500 \2500 > sass\\pages\\_accueil.scss\a 57\2502      @include shadow(0 6px 8px $dark-gray);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > sass\\utils\\_mixins.scss\a 7 \2502  @mixin shadow($horizontal, $vertical, $softening, $color) {\d\a   \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   sass\\pages\\_accueil.scss 57:5  shadow()\a   sass\\pages\\_accueil.scss 57:5  @import\a   sass\\main.scss 6:9             root stylesheet";
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-figure {
-  margin: 0;
-}
-
-body > header {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 8px;
-}
-
-header img {
-  height: 30px;
-}
-
-footer {
-  padding: 5px 20px;
-  color: #fff;
-  background-color: #3a3838;
-}
-footer ul {
-  line-height: 1.5rem;
-}
-@media (min-width: 768px) {
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-footer a {
-  color: #fff;
-}
-footer i {
-  margin-right: 6px;
-}
-
-.search {
-  padding-bottom: 50px;
-  text-align: center;
-  background-color: #F7F7F7;
-}
-.search form {
-  padding: 10px 0;
-  background: linear-gradient(#d5d3d3 0, #eeeded 10%);
-}
-.search form input {
-  border: none;
-  padding: 10px 0;
-  background-color: #eeeded;
-}
-.search div {
-  padding: 30px 0;
-}
-.search h1 {
-  padding: 0 40px;
-}
-.search p {
-  padding: 0 15px 30px 15px;
-}
-.search a {
-  margin: 20px 0;
-  border-radius: 30px;
-  padding: 15px 20px;
-  background: linear-gradient(#FF79DA 10%, #9356DC 100%);
-  color: #fff;
-}
-
-.functioning {
-  padding: 30px 20px;
-}
-.functioning ul {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media (min-width: 768px) {
-  .functioning ul {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.functioning li {
-  border: 1px solid #F7F7F7;
-  border-radius: 20px;
-  padding: 20px 0;
-  background-color: #F7F7F7;
-  box-shadow: 0 6px 8px #eeeded;
-}
-@media (min-width: 768px) {
-  .functioning li {
-    width: 100%;
-  }
-}
-.functioning li:hover, .functioning li:focus {
-  background-color: #f4eefc;
-}
-.functioning i {
-  margin-right: 20px;
-}
-@media (min-width: 768px) {
-  .functioning i {
-    margin-right: 5px;
-  }
-}
-.functioning i:first-child {
-  margin-left: -11px;
-  border-radius: 30px;
-  padding: 6px 7px;
-  background-color: #9356DC;
-  color: #fff;
-  font-size: 0.6rem;
-}
-.functioning i:nth-child(2) {
-  color: #adaaaa;
-}
-.functioning i:nth-child(2):hover, .functioning i:nth-child(2):focus {
-  color: #9356DC;
-}
-
-.restaurants {
-  padding: 30px 20px 40px 20px;
-  background-color: #F7F7F7;
-}
-.restaurants ul {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-@media (min-width: 768px) {
-  .restaurants ul {
-    flex-direction: initial;
-  }
-}
-.restaurants li {
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 10px 6px #eeeded;
-}
-.restaurants figcaption {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-.restaurants img {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-  max-height: 170px;
-  object-fit: cover;
-}
-@media (min-width: 768px) {
-  .restaurants img {
-    height: 160px;
-  }
-}
-.restaurants h3,
-.restaurants p {
-  margin: 0;
-}
-.restaurants header {
-  line-height: 1.5rem;
-}
-.restaurants i {
-  margin-right: 13px;
-  font-size: 1.6rem;
-}
-.restaurants i:hover, .restaurants i:focus {
-  color: #9356DC;
-}
-
-/*# sourceMappingURL=style.css.map */

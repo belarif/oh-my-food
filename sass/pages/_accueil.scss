@@ -54,7 +54,7 @@
     border-radius: 20px;
     padding: 20px 0;
     background-color: $gray;
-    box-shadow: 0 6px 8px $dark-gray;
+    @include shadow(0 6px 8px $dark-gray);
 
     @media (min-width: $tablet) {
       width: 100%;
@@ -98,7 +98,7 @@
   ul {
     display:flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
     
     @media (min-width: $tablet) {
       flex-direction: initial;
@@ -108,7 +108,7 @@
   li {
     border-radius: 20px;
     background-color: $white;
-    box-shadow: 0 10px 6px $dark-gray;
+    @include shadow(0, 10px, 6px, $dark-gray);
   }
 
   figcaption {
