@@ -55,6 +55,9 @@ footer {
 footer a {
   color: #fff;
 }
+footer i {
+  margin-right: 6px;
+}
 
 .search {
   padding-bottom: 50px;
