@@ -3,9 +3,13 @@ footer {
   color: $white;
   background-color: $footer-background;
 
-  ul {
-    line-height: 1.5rem;
+  h3 {
+    @media (min-width: 768px) {
+      text-align: center;
+    }
+  }
 
+  ul {
     @media (min-width: $tablet) {
       display: flex;
       justify-content: space-around;

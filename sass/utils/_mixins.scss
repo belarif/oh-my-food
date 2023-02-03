@@ -7,3 +7,13 @@
 @mixin shadow($horizontal, $vertical, $softening, $color) {
     box-shadow: $horizontal $vertical $softening $color;
 }
+
+// Shrikhand police
+@mixin shrikhand {
+  font-family: Shrikhand, Arial, sans-serif;
+}
+
+// Roboto police
+@mixin roboto {
+  font-family: Roboto, Arial, sans-serif;
+}

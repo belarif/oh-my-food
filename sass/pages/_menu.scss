@@ -1,0 +1,83 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $gray;
+
+  article {
+    position: relative;
+    top: -60px;
+    border-radius: 60px 60px 0 0;
+    padding: 30px 20px 0 20px;
+    background-color: $gray;
+
+    > section {
+      @media (min-width: $tablet) {
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      border-bottom: 3px solid $tertiary;
+      padding-bottom: 6px;
+    }
+
+    li {
+      margin-bottom: 15px;
+      border-radius: 20px;
+      padding: 14px;
+      background-color: $white;
+      @include shadow(0, 10px, 6px, $dark-gray);
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      @media (min-width: $desktop) {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  }
+
+  h1,
+  h3,
+  p {
+      margin: 0;
+  }
+
+  h1 {
+    @include shrikhand;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+      margin-right: 20px;
+      font-size: 1.6rem;
+    }
+  }
+
+  button {
+    margin: -20px auto 50px auto;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 60px;
+    @include gradient($secondary, 10%, $primary, 100%);
+    color: $white;
+  }
+
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
+}
+

@@ -1,16 +1,8 @@
-* {
-  font-family: Roboto, Arial, sans-serif;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 1.6rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Shrikhand, Arial, sans-serif;
+body {
+  margin: auto;
+  max-width: 1400px;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 a {
@@ -37,13 +29,16 @@ figure {
 }
 
 body > header {
+  margin: 20px 0 8px 0;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 8px;
 }
-
-header img {
+body > header .logo {
   height: 30px;
+}
+body > header i {
+  position: relative;
+  right: 90px;
+  bottom: 10px;
 }
 
 footer {
@@ -51,8 +46,10 @@ footer {
   color: #fff;
   background-color: #3a3838;
 }
-footer ul {
-  line-height: 1.5rem;
+@media (min-width: 768px) {
+  footer h3 {
+    text-align: center;
+  }
 }
 @media (min-width: 768px) {
   footer ul {
@@ -213,6 +210,81 @@ footer i {
 }
 .restaurants i:hover, .restaurants i:focus {
   color: #9356DC;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F7F7F7;
+}
+.menu article {
+  position: relative;
+  top: -60px;
+  border-radius: 60px 60px 0 0;
+  padding: 30px 20px 0 20px;
+  background-color: #F7F7F7;
+}
+@media (min-width: 768px) {
+  .menu article > section {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+.menu article h2 {
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 6px;
+}
+.menu article li {
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 14px;
+  background-color: #fff;
+  box-shadow: 0 10px 6px #eeeded;
+}
+@media (min-width: 992px) {
+  .menu article {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .menu article div {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+.menu h1,
+.menu h3,
+.menu p {
+  margin: 0;
+}
+.menu h1 {
+  font-family: Shrikhand, Arial, sans-serif;
+}
+.menu header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu header i {
+  margin-right: 20px;
+  font-size: 1.6rem;
+}
+.menu button {
+  margin: -20px auto 50px auto;
+  border: none;
+  border-radius: 30px;
+  padding: 20px 60px;
+  background: linear-gradient(#FF79DA 10%, #9356DC 100%);
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .menu {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
