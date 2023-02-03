@@ -4,6 +4,8 @@ footer {
   background-color: $footer-background;
 
   h3 {
+    @include shrikhand;
+    
     @media (min-width: 768px) {
       text-align: center;
     }

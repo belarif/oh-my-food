@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -18,12 +18,12 @@
         <header>
             <a href="../">
                 <i class="fa-solid fa-arrow-left"></i>
-                <img src="../images/logo/ohmyfood.png" alt="logo oh-my-food" title="logo oh-my-food">
+                <img class="logo" src="../images/logo/ohmyfood.png" alt="logo oh-my-food" title="logo oh-my-food">
             </a>
         </header>
 
         <!-- main content -->
-        <main>
+        <main class="menu">
             <header>
                 <img src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" title="Le délice des sens" alt="image le délice des sens">
             </header>
@@ -34,98 +34,100 @@
                     <i class="fa-regular fa-heart"></i>
                 </header>
 
-                <!-- entrees -->
-                <section>
-                    <h2>Entrées</h2>
-                    <ul>
-                        <li>
-                            <section>
-                                <h3>TTartare de thon</h3>
-                                <p>Assaisonné au yuzu</p>
-                            </section>
-                            <b>25€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Bouchée de homard croustillant</h3>
-                                <p>Et sa farandole de petits légumes</p>
-                            </section>
-                            <b>35€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Velouté de cèpes</h3>
-                                <p>Aux truffes</p>
-                            </section>
-                            <b>20€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                    </ul>
-                </section>
+                <div>
+                    <!-- entrees -->
+                    <section>
+                        <h2>Entrées</h2>
+                        <ul>
+                            <li>
+                                <section>
+                                    <h3>TTartare de thon</h3>
+                                    <p>Assaisonné au yuzu</p>
+                                </section>
+                                <b>25€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Bouchée de homard croustillant</h3>
+                                    <p>Et sa farandole de petits légumes</p>
+                                </section>
+                                <b>35€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Velouté de cèpes</h3>
+                                    <p>Aux truffes</p>
+                                </section>
+                                <b>20€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                        </ul>
+                    </section>
 
-                <!-- dishes -->
-                <section>
-                    <h2>Plats</h2>
-                    <ul>
-                        <li>
-                            <section>
-                                <h3>Poulet rôti aux herbes de Provence</h3>
-                                <p>Et sa crème de truffe</p>
-                            </section>
-                            <b>40€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Langouste rôtie</h3>
-                                <p>Et ses légumes de saison</p>
-                            </section>
-                            <b>35€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Côte de boeuf Angus</h3>
-                                <p>Et sa purée de panais</p>
-                            </section>
-                            <b>44€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                    </ul>
-                </section>
+                    <!-- dishes -->
+                    <section>
+                        <h2>Plats</h2>
+                        <ul>
+                            <li>
+                                <section>
+                                    <h3>Poulet rôti aux herbes de Provence</h3>
+                                    <p>Et sa crème de truffe</p>
+                                </section>
+                                <b>40€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Langouste rôtie</h3>
+                                    <p>Et ses légumes de saison</p>
+                                </section>
+                                <b>35€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Côte de boeuf Angus</h3>
+                                    <p>Et sa purée de panais</p>
+                                </section>
+                                <b>44€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                        </ul>
+                    </section>
 
-                <!-- desserts -->
-                <section>
-                    <h2>Desserts</h2>
-                    <ul>
-                        <li>
-                            <section>
-                                <h3>Farandole de desserts</h3>
-                                <p>Du chef</p>
-                            </section>
-                            <b>18€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Crème brulée</h3>
-                                <p>Revisité</p>
-                            </section>
-                            <b>22€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                        <li>
-                            <section>
-                                <h3>Tiramisu</h3>
-                                <p>À la noisette</p>
-                            </section>
-                            <b>23€</b>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </li>
-                    </ul>
-                </section>
+                    <!-- desserts -->
+                    <section>
+                        <h2>Desserts</h2>
+                        <ul>
+                            <li>
+                                <section>
+                                    <h3>Farandole de desserts</h3>
+                                    <p>Du chef</p>
+                                </section>
+                                <b>18€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Crème brulée</h3>
+                                    <p>Revisité</p>
+                                </section>
+                                <b>22€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                            <li>
+                                <section>
+                                    <h3>Tiramisu</h3>
+                                    <p>À la noisette</p>
+                                </section>
+                                <b>23€</b>
+                                <i class="fa-regular fa-circle-check"></i>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
             </article>
             
             <!-- order button -->

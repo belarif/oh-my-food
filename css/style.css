@@ -5,6 +5,10 @@ body {
   line-height: 1.5rem;
 }
 
+h1 {
+  font-size: 1.6rem;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -45,6 +49,9 @@ footer {
   padding: 5px 20px;
   color: #fff;
   background-color: #3a3838;
+}
+footer h3 {
+  font-family: Shrikhand, Arial, sans-serif;
 }
 @media (min-width: 768px) {
   footer h3 {
@@ -212,11 +219,30 @@ footer i {
   color: #9356DC;
 }
 
+* {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #F7F7F7;
+}
+.menu img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .menu img {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .menu img {
+    height: 480px;
+  }
 }
 .menu article {
   position: relative;
@@ -234,6 +260,7 @@ footer i {
 .menu article h2 {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 6px;
+  font-weight: 100;
 }
 .menu article li {
   margin-bottom: 15px;

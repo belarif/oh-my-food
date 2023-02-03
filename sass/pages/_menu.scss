@@ -1,8 +1,26 @@
+* {
+  @include roboto;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: $gray;
+
+  img {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+
+    @media (min-width: $tablet) {
+      height: 400px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 480px;
+    }
+  }
 
   article {
     position: relative;
@@ -21,6 +39,7 @@
     h2 {
       border-bottom: 3px solid $tertiary;
       padding-bottom: 6px;
+      font-weight: 100;
     }
 
     li {
