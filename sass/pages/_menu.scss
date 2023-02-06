@@ -39,6 +39,7 @@
     h2 {
       border-bottom: 3px solid $tertiary;
       padding-bottom: 6px;
+      width: 55px;
       font-weight: 100;
     }
 
@@ -92,6 +93,7 @@
     border-radius: 30px;
     padding: 20px 60px;
     @include gradient($secondary, 10%, $primary, 100%);
+    @include shadow(0, 10px, 6px, $dark-gray);
     color: $white;
   }
 

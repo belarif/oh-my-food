@@ -260,6 +260,7 @@ footer i {
 .menu article h2 {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 6px;
+  width: 55px;
   font-weight: 100;
 }
 .menu article li {
@@ -306,6 +307,7 @@ footer i {
   border-radius: 30px;
   padding: 20px 60px;
   background: linear-gradient(#FF79DA 10%, #9356DC 100%);
+  box-shadow: 0 10px 6px #eeeded;
   color: #fff;
 }
 @media (min-width: 768px) {
