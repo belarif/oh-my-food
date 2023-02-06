@@ -92,9 +92,14 @@
     border: none;
     border-radius: 30px;
     padding: 20px 60px;
+    color: $white;
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
-    color: $white;
+
+    &:hover {
+      @include gradient($light-secondary, 10%, $light-primary, 100%);
+      @include shadow(0, 10px, 6px, $hover-gray);
+    }
   }
 
   @media (min-width: $tablet) {

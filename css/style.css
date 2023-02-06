@@ -98,8 +98,13 @@ footer i {
   margin: 20px 0;
   border-radius: 30px;
   padding: 15px 20px;
-  background: linear-gradient(#FF79DA 10%, #9356DC 100%);
   color: #fff;
+  background: linear-gradient(#FF79DA 10%, rgb(147, 86, 220) 100%);
+  box-shadow: 0 10px 6px #eeeded;
+}
+.search a:hover {
+  background: linear-gradient(rgba(255, 121, 218, 0.8) 10%, rgba(147, 86, 220, 0.8) 100%);
+  box-shadow: 0 10px 6px #c1bdbd;
 }
 
 .functioning {
@@ -143,7 +148,7 @@ footer i {
   margin-left: -11px;
   border-radius: 30px;
   padding: 6px 7px;
-  background-color: #9356DC;
+  background-color: rgb(147, 86, 220);
   color: #fff;
   font-size: 0.6rem;
 }
@@ -151,7 +156,7 @@ footer i {
   color: #adaaaa;
 }
 .functioning i:nth-child(2):hover, .functioning i:nth-child(2):focus {
-  color: #9356DC;
+  color: rgb(147, 86, 220);
 }
 
 .restaurants {
@@ -216,7 +221,7 @@ footer i {
   font-size: 1.6rem;
 }
 .restaurants i:hover, .restaurants i:focus {
-  color: #9356DC;
+  color: rgb(147, 86, 220);
 }
 
 * {
@@ -306,9 +311,13 @@ footer i {
   border: none;
   border-radius: 30px;
   padding: 20px 60px;
-  background: linear-gradient(#FF79DA 10%, #9356DC 100%);
-  box-shadow: 0 10px 6px #eeeded;
   color: #fff;
+  background: linear-gradient(#FF79DA 10%, rgb(147, 86, 220) 100%);
+  box-shadow: 0 10px 6px #eeeded;
+}
+.menu button:hover {
+  background: linear-gradient(rgba(255, 121, 218, 0.8) 10%, rgba(147, 86, 220, 0.8) 100%);
+  box-shadow: 0 10px 6px #c1bdbd;
 }
 @media (min-width: 768px) {
   .menu {
