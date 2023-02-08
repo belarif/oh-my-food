@@ -1,3 +1,7 @@
+h2 {
+  text-transform: capitalize;
+}
+
 .search {
   padding-bottom: 50px;
   text-align: center;
@@ -35,7 +39,8 @@
     @include shadow(0, 10px, 6px, $dark-gray);
     
 
-    &:hover {
+    &:hover,
+    &:focus {
       @include gradient($light-secondary, 10%, $light-primary, 100%);
       @include shadow(0, 10px, 6px, $hover-gray);
     }
@@ -69,7 +74,11 @@
 
     &:hover,
     &:focus {
-      background-color: adjust-color($color: $primary, $lightness: 36%)
+      background-color: adjust-color($color: $primary, $lightness: 36%);
+
+      i:nth-child(2) {
+        color: $primary;
+      }
     }
   }
 
@@ -91,10 +100,6 @@
 
   i:nth-child(2) {
     color: $icons-functioning;
-    &:hover,
-    &:focus {
-      color: $primary;
-    }
   }
 }
 
@@ -147,7 +152,7 @@
     }
   }
 
-  h3, 
+  h3,
   p {
     margin: 0;
   }

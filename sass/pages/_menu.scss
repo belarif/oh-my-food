@@ -41,6 +41,7 @@
       padding-bottom: 6px;
       width: 55px;
       font-weight: 100;
+      text-transform: uppercase;
     }
 
     li {
@@ -96,7 +97,8 @@
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
 
-    &:hover {
+    &:hover,
+    &:focus {
       @include gradient($light-secondary, 10%, $light-primary, 100%);
       @include shadow(0, 10px, 6px, $hover-gray);
     }
