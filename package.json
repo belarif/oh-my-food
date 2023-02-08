@@ -1,0 +1,19 @@
+{
+  "name": "oh-my-food-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belarif/oh-my-food.git"
+  },
+  "author": "hocine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belarif/oh-my-food/issues"
+  },
+  "homepage": "https://github.com/belarif/oh-my-food#readme"
+}

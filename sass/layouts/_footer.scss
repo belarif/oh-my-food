@@ -1,0 +1,28 @@
+footer {
+  padding: 5px 20px;
+  color: $white;
+  background-color: $footer-background;
+
+  h3 {
+    @include shrikhand;
+    
+    @media (min-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  ul {
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  a {
+    color: $white;
+  }
+
+  i {
+    margin-right: 6px;
+  }
+}
