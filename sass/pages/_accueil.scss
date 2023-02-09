@@ -161,9 +161,17 @@ h2 {
     line-height: 1.5rem;
   }
 
+  .fa-solid {
+    color: transparent;
+  }
+
   i {
+    position: absolute;
+    right: 30px;
     margin-right: 13px;
     font-size: 1.6rem;
+    transition: color 1s;
+
     &:hover,
     &:focus {
       color: $primary;

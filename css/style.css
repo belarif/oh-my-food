@@ -220,9 +220,15 @@ h2 {
 .restaurants header {
   line-height: 1.5rem;
 }
+.restaurants .fa-solid {
+  color: transparent;
+}
 .restaurants i {
+  position: absolute;
+  right: 30px;
   margin-right: 13px;
   font-size: 1.6rem;
+  transition: color 1s;
 }
 .restaurants i:hover, .restaurants i:focus {
   color: rgb(147, 86, 220);
@@ -307,9 +313,18 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+.menu header .fa-solid {
+  color: transparent;
+}
 .menu header i {
+  position: absolute;
+  right: 30px;
   margin-right: 20px;
   font-size: 1.6rem;
+  transition: color 1s;
+}
+.menu header i:hover, .menu header i:focus {
+  color: rgb(147, 86, 220);
 }
 .menu button {
   margin: -20px auto 50px auto;
