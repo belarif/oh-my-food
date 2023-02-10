@@ -234,6 +234,14 @@ h2 {
   color: rgb(147, 86, 220);
 }
 
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0.8);
+  }
+}
 * {
   font-family: Roboto, Arial, sans-serif;
 }
@@ -280,11 +288,47 @@ h2 {
   text-transform: uppercase;
 }
 .menu article li {
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
   border-radius: 20px;
-  padding: 14px;
   background-color: #fff;
+  max-height: 70px;
+  cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
+  overflow: hidden;
+}
+.menu article li section {
+  padding: 14px;
+  width: 100%;
+}
+.menu article li b {
+  margin-right: 10px;
+}
+.menu article li .check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  border-radius: 0 20px 20px 0;
+  height: 70px;
+  background-color: #99e2d0;
+  transform: scaleX(0);
+  transform-origin: 100% 0;
+  transition: all 500ms ease-in-out;
+}
+.menu article li .check-icon i {
+  color: #fff;
+  font-size: 1.6rem;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+}
+.menu article li:hover .check-icon {
+  transform: scaleX(1);
+  padding: 0 20px;
+}
+.menu article li:hover i {
+  transform: rotate(360deg);
 }
 @media (min-width: 992px) {
   .menu article {
@@ -342,6 +386,15 @@ h2 {
 @media (min-width: 768px) {
   .menu {
     text-align: center;
+  }
+}
+
+@keyframes progress-check-icon {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 

@@ -45,11 +45,56 @@
     }
 
     li {
+      display: flex;
+      align-items: center;
       margin-bottom: 15px;
       border-radius: 20px;
-      padding: 14px;
       background-color: $white;
+      max-height: 70px;
+      cursor: pointer;
       @include shadow(0, 10px, 6px, $dark-gray);
+
+      overflow: hidden;
+
+      section {
+        padding: 14px;
+        width: 100%;
+      }
+
+      b {
+        margin-right: 10px;
+      }
+
+      .check-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        border-radius: 0 20px 20px 0;
+        height: 70px;
+        background-color: $tertiary;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: all 500ms ease-in-out;
+        
+        i {
+          color: $white;
+          font-size: 1.6rem;
+          transform: rotate(0deg);
+          transition: transform 500ms;
+        }
+      }
+
+      &:hover {
+        .check-icon {
+          transform: scaleX(1);
+          padding: 0 20px;
+        }
+
+        i {
+          transform: rotate(360deg);
+        }
+      }
     }
 
     @media (min-width: $desktop) {
@@ -118,6 +163,15 @@
 
   @media (min-width: $tablet) {
     text-align: center;
+  }
+}
+
+@keyframes progress-check-icon {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 
