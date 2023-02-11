@@ -131,6 +131,21 @@ h2 {
     }
   }
 
+  .card {
+    position: relative;
+  }
+
+  .news {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    background-color: scale-color($color: $tertiary, $lightness: 10%);
+    color: darken($tertiary, 35%);
+    font-weight: bold;
+  }
+
   figcaption {
     display: flex;
     justify-content: space-between;
