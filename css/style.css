@@ -212,10 +212,11 @@ h2 {
   top: 15px;
   right: 15px;
   border: 1px solid transparent;
+  border-radius: 3px;
   padding: 6px 12px;
   background-color: #a3e5d5;
   color: #2c9c81;
-  font-weight: bold;
+  font-weight: 600;
 }
 .restaurants figcaption {
   display: flex;
@@ -324,13 +325,17 @@ h2 {
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu article li section {
   padding: 14px;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu article li b {
-  margin-right: 10px;
+  margin: 0 10px 0 15px;
 }
 .menu article li .check-icon {
   display: flex;

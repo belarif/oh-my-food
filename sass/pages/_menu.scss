@@ -53,16 +53,19 @@
       max-height: 70px;
       cursor: pointer;
       @include shadow(0, 10px, 6px, $dark-gray);
-
       overflow: hidden;
+      text-overflow: ellipsis;
 
       section {
         padding: 14px;
         width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       b {
-        margin-right: 10px;
+        margin: 0 10px 0 15px;
       }
 
       .check-icon {
