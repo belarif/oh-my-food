@@ -102,7 +102,7 @@
       flex-direction: column;
     }
 
-    div {
+    .dishes {
       @media (min-width: $desktop) {
         margin-top: 20px;
         display: grid;
@@ -126,15 +126,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+
+    .hearts {
+      position: relative;
+      margin-right: 20px;
+    }
 
     .fa-solid {
+      position: absolute;
+      left: 0;
+      z-index: 1;
       color: transparent;
     }
 
     i {
-      position: absolute;
-      right: 30px;
-      margin-right: 20px;
       font-size: 1.6rem;
       transition: color 1s;
 
@@ -163,15 +169,6 @@
 
   @media (min-width: $tablet) {
     text-align: center;
-  }
-}
-
-@keyframes progress-check-icon {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
   }
 }
 
