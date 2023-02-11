@@ -135,6 +135,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    gap: 10px;
   }
 
   img {
@@ -161,14 +162,23 @@ h2 {
     line-height: 1.5rem;
   }
 
+  .hearts {
+    position: relative;
+    padding-right: 20px;
+
+    @media (min-width: $tablet) {
+      padding-right: 0;
+    }
+  }
+
   .fa-solid {
+    position: absolute;
+    left: 0;
+    z-index: 1;
     color: transparent;
   }
 
   i {
-    position: absolute;
-    right: 30px;
-    margin-right: 13px;
     font-size: 1.6rem;
     transition: color 1s;
 
@@ -176,15 +186,6 @@ h2 {
     &:focus {
       color: $primary;
     }
-  }
-}
-
-@keyframes progress-bar {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(0.8);
   }
 }
 
