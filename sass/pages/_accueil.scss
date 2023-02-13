@@ -4,14 +4,14 @@
   }
   30% {
     transform: scale(0.3,1);
-    animation-timing-function: cubic-bezier(.1,.8,0,.3);
+    animation-timing-function: cubic-bezier(.3,.3,0,.3);
   }
   50% {
     transform: scale(0.5,1);
   }
   80% {
     transform: scale(0.8,1);
-    animation-timing-function: cubic-bezier(.1,.6,0,.3);
+    animation-timing-function: cubic-bezier(.3,.3,0,.3);
   }
   100% {
     transform: scale(1,1);
