@@ -1,4 +1,5 @@
 body {
+  position: relative;
   margin: auto;
   max-width: 1400px;
   font-size: 1.1rem;
@@ -69,6 +70,73 @@ footer a {
 }
 footer i {
   margin-right: 6px;
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scale(0, 1);
+  }
+  30% {
+    transform: scale(0.3, 1);
+    animation-timing-function: cubic-bezier(0.1, 0.8, 0, 0.3);
+  }
+  50% {
+    transform: scale(0.5, 1);
+  }
+  80% {
+    transform: scale(0.8, 1);
+    animation-timing-function: cubic-bezier(0.1, 0.6, 0, 0.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes hide-progress-bar {
+  0% {
+    z-index: -1;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+.container {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #f7f7f7;
+  width: 100%;
+  animation: hide-progress-bar 1s 3.5s forwards;
+}
+.container .progress {
+  margin: 100px 50px 0 50px;
+  border-top: 3px solid rgb(147, 86, 220);
+  border-right: 3px solid rgb(147, 86, 220);
+  border-left: 3px solid rgb(147, 86, 220);
+  border-bottom: 3px solid #ff79da;
+  border-radius: 10px;
+  padding: 3px;
+  height: 30px;
+}
+.container .progress__bar {
+  border-radius: 10px;
+  height: 100%;
+  background: linear-gradient(rgb(147, 86, 220) 10%, #ff79da 100%);
+  transform-origin: left center;
+  transform: scale(0, 0);
+  animation: progress-bar 3s 0.5s both cubic-bezier(0.3, 0.3, 0.8, 0.8);
+}
+@media (min-width: 768px) {
+  .container .progress {
+    margin: 100px 120px 0 120px;
+  }
+}
+@media (min-width: 992px) {
+  .container .progress {
+    margin: 100px 180px 0 180px;
+  }
 }
 
 h2 {
@@ -211,6 +279,7 @@ h2 {
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 1;
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 6px 12px;
@@ -324,15 +393,13 @@ h2 {
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu article li section {
   padding: 14px;
   width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu article li b {
   margin: 0 10px 0 15px;

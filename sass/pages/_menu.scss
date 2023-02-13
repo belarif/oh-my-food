@@ -53,15 +53,13 @@
       max-height: 70px;
       cursor: pointer;
       @include shadow(0, 10px, 6px, $dark-gray);
-      overflow: hidden;
-      text-overflow: ellipsis;
-
+      
       section {
         padding: 14px;
         width: 100%;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
       }
 
       b {
