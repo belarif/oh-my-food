@@ -53,9 +53,9 @@
       }
     }
 
-    $anim-del: 0.3s;
+    $anim-del: 0.2s;
 
-    @for $i from 1 through 3 {
+    @for $i from 1 through 6 {
       li:nth-child(#{$i}) {
         display: flex;
         align-items: center;
@@ -65,18 +65,16 @@
         max-height: 70px;
         cursor: pointer;
         @include shadow(0, 10px, 6px, $dark-gray);
-
-        transform: scale(0);
-        animation: items-display 0.5s $anim-del forwards;
+        transform: scaleX(0);
+        transform-origin: 100% 50%; 
+        animation: items-display 0.5s $anim-del forwards infinite;
         $anim-del: $anim-del + 0.3;
-        
+        overflow: hidden;
+
         section {
           padding: 14px;
           text-align: start;
           width: 100%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
         }
 
         b {
@@ -116,7 +114,7 @@
         }
 
       }
-  }
+    }
 
     @media (min-width: $desktop) {
       display: flex;
