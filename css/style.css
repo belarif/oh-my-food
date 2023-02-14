@@ -42,8 +42,18 @@ body > header .logo {
 }
 body > header i {
   position: relative;
-  right: 90px;
+  right: 40px;
   bottom: 10px;
+}
+@media (min-width: 768px) {
+  body > header i {
+    right: 260px;
+  }
+}
+@media (min-width: 992px) {
+  body > header i {
+    right: 350px;
+  }
 }
 
 footer {
@@ -384,7 +394,15 @@ h2 {
   font-weight: 100;
   text-transform: uppercase;
 }
-.menu article li {
+@keyframes items-display {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}
+.menu article li:nth-child(1) {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -393,41 +411,143 @@ h2 {
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
+  transform: scale(0);
+  animation: items-display 0.5s 0.3s forwards;
 }
-.menu article li section {
+.menu article li:nth-child(1) section {
   padding: 14px;
+  text-align: start;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu article li b {
+.menu article li:nth-child(1) b {
   margin: 0 10px 0 15px;
 }
-.menu article li .check-icon {
+.menu article li:nth-child(1) .check-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0;
   border-radius: 0 20px 20px 0;
+  width: 0;
   height: 70px;
   background-color: #99e2d0;
   transform: scaleX(0);
-  transform-origin: 100% 0;
+  transform-origin: right center;
   transition: all 500ms ease-in-out;
 }
-.menu article li .check-icon i {
+.menu article li:nth-child(1) .check-icon i {
   color: #fff;
   font-size: 1.6rem;
   transform: rotate(0deg);
   transition: transform 500ms;
 }
-.menu article li:hover .check-icon {
+.menu article li:nth-child(1):hover .check-icon {
+  padding: 0 35px;
   transform: scaleX(1);
-  padding: 0 20px;
 }
-.menu article li:hover i {
-  transform: rotate(360deg);
+.menu article li:nth-child(1):hover i {
+  transform: rotate(1turn);
+}
+.menu article li:nth-child(2) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  max-height: 70px;
+  cursor: pointer;
+  box-shadow: 0 10px 6px #eeeded;
+  transform: scale(0);
+  animation: items-display 0.5s 0.6s forwards;
+}
+.menu article li:nth-child(2) section {
+  padding: 14px;
+  text-align: start;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu article li:nth-child(2) b {
+  margin: 0 10px 0 15px;
+}
+.menu article li:nth-child(2) .check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  border-radius: 0 20px 20px 0;
+  width: 0;
+  height: 70px;
+  background-color: #99e2d0;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: all 500ms ease-in-out;
+}
+.menu article li:nth-child(2) .check-icon i {
+  color: #fff;
+  font-size: 1.6rem;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+}
+.menu article li:nth-child(2):hover .check-icon {
+  padding: 0 35px;
+  transform: scaleX(1);
+}
+.menu article li:nth-child(2):hover i {
+  transform: rotate(1turn);
+}
+.menu article li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  max-height: 70px;
+  cursor: pointer;
+  box-shadow: 0 10px 6px #eeeded;
+  transform: scale(0);
+  animation: items-display 0.5s 0.9s forwards;
+}
+.menu article li:nth-child(3) section {
+  padding: 14px;
+  text-align: start;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu article li:nth-child(3) b {
+  margin: 0 10px 0 15px;
+}
+.menu article li:nth-child(3) .check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  border-radius: 0 20px 20px 0;
+  width: 0;
+  height: 70px;
+  background-color: #99e2d0;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: all 500ms ease-in-out;
+}
+.menu article li:nth-child(3) .check-icon i {
+  color: #fff;
+  font-size: 1.6rem;
+  transform: rotate(0deg);
+  transition: transform 500ms;
+}
+.menu article li:nth-child(3):hover .check-icon {
+  padding: 0 35px;
+  transform: scaleX(1);
+}
+.menu article li:nth-child(3):hover i {
+  transform: rotate(1turn);
 }
 @media (min-width: 992px) {
   .menu article {

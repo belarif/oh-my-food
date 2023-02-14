@@ -8,8 +8,16 @@ body > header {
 
   i {
     position: relative;
-    right: 90px;
+    right: 40px;
     bottom: 10px;
+
+    @media (min-width: $tablet) {
+      right: 260px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 350px;
+    }
   }
 }
 
