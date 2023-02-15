@@ -1,3 +1,7 @@
+* {
+  @include roboto;
+}
+
 @keyframes progress-bar{
   0% {
     transform: scale(0,1);
@@ -21,9 +25,11 @@
 @keyframes hide-progress-bar {
   0% {
     z-index: -1;
+    background-color: transparent;
   }
   100% {
     z-index: -1;
+    background-color: transparent;
   }
 }
 
@@ -67,10 +73,6 @@
   }
 }
 
-h2 {
-  text-transform: capitalize;
-}
-
 .search {
   padding-bottom: 50px;
   text-align: center;
@@ -99,10 +101,11 @@ h2 {
 
   .presentation {
     padding: 30px 0;
-  }
 
-  h1 {
-     padding: 0 40px;
+    h1 {
+      padding: 0 40px;
+      font-size: 1.6rem;
+    }
   }
 
   p {
@@ -117,7 +120,6 @@ h2 {
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
     
-
     &:hover,
     &:focus {
       @include gradient($light-secondary, 10%, $light-primary, 100%);
@@ -146,6 +148,7 @@ h2 {
     padding: 20px 0;
     background-color: $gray;
     @include shadow(0, 6px, 8px, $dark-gray);
+    font-weight: 300;
 
     @media (min-width: $tablet) {
       width: 100%;
@@ -282,6 +285,16 @@ h2 {
     &:focus {
       color: $primary;
     }
+  }
+}
+
+.functioning,
+.restaurants {
+  h2 {
+    text-transform: capitalize;
+  }
+  h3 {
+    font-size: 1.1rem;
   }
 }
 

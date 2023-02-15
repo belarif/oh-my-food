@@ -29,19 +29,36 @@
     padding: 30px 20px 0 20px;
     background-color: $gray;
 
-    > section {
-      @media (min-width: $tablet) {
-        margin-bottom: 30px;
+    h1 {
+      font-size: 1.7rem;
+      @include shrikhand;
+    }
+
+    .dishes > section {
+      margin-top: 35px;
+      @media (min-width: $desktop) {
+        margin-top: 0;
         width: 100%;
       }
     }
 
     h2 {
       border-bottom: 3px solid $tertiary;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       width: 55px;
-      font-weight: 100;
       text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 100;
     }
 
     @keyframes items-display {
@@ -69,16 +86,26 @@
         transform-origin: 100% 50%; 
         animation: items-display 0.5s $anim-del forwards infinite;
         $anim-del: $anim-del + 0.3;
-        overflow: hidden;
 
         section {
           padding: 14px;
           text-align: start;
           width: 100%;
+          overflow: hidden;
+      
+          h3,
+          p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
         }
 
         b {
           margin: 0 10px 0 15px;
+          padding-top: 20px;
+          font-size: 1rem;
+          font-weight: 300;
         }
 
         .check-icon {
@@ -116,16 +143,11 @@
       }
     }
 
-    @media (min-width: $desktop) {
-      display: flex;
-      flex-direction: column;
-    }
-
     .dishes {
       @media (min-width: $desktop) {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
     }
@@ -135,10 +157,6 @@
   h3,
   p {
       margin: 0;
-  }
-
-  h1 {
-    @include shrikhand;
   }
 
   header {
@@ -176,6 +194,7 @@
     border-radius: 30px;
     padding: 20px 60px;
     color: $white;
+    cursor: pointer;
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
 
