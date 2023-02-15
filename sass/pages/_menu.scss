@@ -29,39 +29,125 @@
     padding: 30px 20px 0 20px;
     background-color: $gray;
 
-    > section {
-      @media (min-width: $tablet) {
-        margin-bottom: 30px;
+    h1 {
+      font-size: 1.7rem;
+      @include shrikhand;
+    }
+
+    .dishes > section {
+      margin-top: 35px;
+      @media (min-width: $desktop) {
+        margin-top: 0;
         width: 100%;
       }
     }
 
     h2 {
       border-bottom: 3px solid $tertiary;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       width: 55px;
-      font-weight: 100;
       text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.1rem;
     }
 
-    li {
-      margin-bottom: 15px;
-      border-radius: 20px;
-      padding: 14px;
-      background-color: $white;
-      @include shadow(0, 10px, 6px, $dark-gray);
+    h3 {
+      font-weight: 500;
+      font-size: 1.1rem;
     }
 
-    @media (min-width: $desktop) {
-      display: flex;
-      flex-direction: column;
+    p {
+      font-size: 1rem;
+      font-weight: 100;
     }
 
-    div {
+    @keyframes items-display {
+      0% {
+        transform: none;
+      }
+      100% {
+        transform: none;
+      }
+    }
+
+    $anim-del: 0.2s;
+
+    @for $i from 1 through 6 {
+      li:nth-child(#{$i}) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        background-color: $white;
+        max-height: 70px;
+        cursor: pointer;
+        @include shadow(0, 10px, 6px, $dark-gray);
+        transform: scaleX(0);
+        transform-origin: 100% 50%; 
+        animation: items-display 0.5s $anim-del forwards infinite;
+        $anim-del: $anim-del + 0.3;
+
+        section {
+          padding: 14px;
+          text-align: start;
+          width: 100%;
+          overflow: hidden;
+      
+          h3,
+          p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+
+        b {
+          margin: 0 10px 0 15px;
+          padding-top: 20px;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+
+        .check-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0;
+          border-radius: 0 20px 20px 0;
+          width: 0;
+          height: 70px;
+          background-color: $tertiary;
+          transform: scaleX(0);
+          transform-origin: right center;
+          transition: all 500ms ease-in-out;
+          
+          i {
+            color: $white;
+            font-size: 1.6rem;
+            transform: rotate(0deg);
+            transition: transform 500ms;
+          }
+        }
+
+        &:hover {
+          .check-icon {
+            padding: 0 35px;
+            transform: scaleX(1);
+          }
+
+          i {
+            transform: rotate(1turn);
+          }
+        }
+
+      }
+    }
+
+    .dishes {
       @media (min-width: $desktop) {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
     }
@@ -73,18 +159,32 @@
       margin: 0;
   }
 
-  h1 {
-    @include shrikhand;
-  }
-
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+
+    .hearts {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    .fa-solid {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      color: transparent;
+    }
 
     i {
-      margin-right: 20px;
       font-size: 1.6rem;
+      transition: color 1s;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
     }
   }
 
@@ -94,6 +194,7 @@
     border-radius: 30px;
     padding: 20px 60px;
     color: $white;
+    cursor: pointer;
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
 

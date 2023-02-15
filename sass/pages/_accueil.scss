@@ -1,5 +1,76 @@
-h2 {
-  text-transform: capitalize;
+* {
+  @include roboto;
+}
+
+@keyframes progress-bar{
+  0% {
+    transform: scale(0,1);
+  }
+  30% {
+    transform: scale(0.3,1);
+    animation-timing-function: cubic-bezier(.3,.3,0,.3);
+  }
+  50% {
+    transform: scale(0.5,1);
+  }
+  80% {
+    transform: scale(0.8,1);
+    animation-timing-function: cubic-bezier(.3,.3,0,.3);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes hide-progress-bar {
+  0% {
+    z-index: -1;
+    background-color: transparent;
+  }
+  100% {
+    z-index: -1;
+    background-color: transparent;
+  }
+}
+
+.container {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $gray;
+  width: 100%;
+  animation: hide-progress-bar 1s 3.5s forwards;
+
+  .progress {
+    margin: 100px 50px 0 50px;
+    border-top: 3px solid $primary;
+    border-right: 3px solid $primary;
+    border-left: 3px solid $primary;
+    border-bottom: 3px solid $secondary;
+    border-radius: 10px;
+    padding: 3px;
+    height: 30px;
+
+    &__bar {
+      border-radius: 10px;
+      height: 100%;
+      @include gradient($primary, 10%, $secondary, 100%);
+      transform-origin: left center;
+      transform: scale(0,0);
+      animation: progress-bar 3s 0.5s both cubic-bezier(.3,.3,.8,.8);
+    }
+
+    @media (min-width: $tablet) {
+      margin: 100px 120px 0 120px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 100px 180px 0 180px;
+    }
+  }
 }
 
 .search {
@@ -14,16 +85,27 @@ h2 {
     input {
       border: none;
       padding: 10px 0;
+      width: 30%;
       background-color: $dark-gray;
+      text-align: center;
+
+      @media (min-width: $tablet) {
+        width: 20%;
+      }
+
+      @media (min-width: $desktop) {
+        width: 12%;
+      }
     }
   }
 
-  div {
+  .presentation {
     padding: 30px 0;
-  }
 
-  h1 {
-     padding: 0 40px;
+    h1 {
+      padding: 0 40px;
+      font-size: 1.6rem;
+    }
   }
 
   p {
@@ -38,7 +120,6 @@ h2 {
     @include gradient($secondary, 10%, $primary, 100%);
     @include shadow(0, 10px, 6px, $dark-gray);
     
-
     &:hover,
     &:focus {
       @include gradient($light-secondary, 10%, $light-primary, 100%);
@@ -67,6 +148,7 @@ h2 {
     padding: 20px 0;
     background-color: $gray;
     @include shadow(0, 6px, 8px, $dark-gray);
+    font-weight: 300;
 
     @media (min-width: $tablet) {
       width: 100%;
@@ -131,10 +213,28 @@ h2 {
     }
   }
 
+  .card {
+    position: relative;
+  }
+
+  .news {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 12px;
+    background-color: scale-color($color: $tertiary, $lightness: 10%);
+    color: darken($tertiary, 35%);
+    font-weight: 600;
+  }
+
   figcaption {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    gap: 10px;
   }
 
   img {
@@ -161,13 +261,40 @@ h2 {
     line-height: 1.5rem;
   }
 
+  .hearts {
+    position: relative;
+    padding-right: 20px;
+
+    @media (min-width: $tablet) {
+      padding-right: 0;
+    }
+  }
+
+  .fa-solid {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+  }
+
   i {
-    margin-right: 13px;
     font-size: 1.6rem;
+    transition: color 1s;
+
     &:hover,
     &:focus {
       color: $primary;
     }
+  }
+}
+
+.functioning,
+.restaurants {
+  h2 {
+    text-transform: capitalize;
+  }
+  h3 {
+    font-size: 1.1rem;
   }
 }
 
