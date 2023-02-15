@@ -1,7 +1,7 @@
 {
   "name": "oh-my-food-sass",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Ohmyfood est 100% mobile, elle permet de choisir son plat avant d'arriver au restaurant",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css"
