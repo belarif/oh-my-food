@@ -63,10 +63,10 @@
 
     @keyframes items-display {
       0% {
-        transform: none;
+        transform: translateY(0);
       }
       100% {
-        transform: none;
+        transform: translateY(-14px);
       }
     }
 
@@ -77,14 +77,15 @@
         display: flex;
         align-items: center;
         margin-bottom: 15px;
+        margin-top: 22px;
         border-radius: 20px;
         background-color: $white;
         max-height: 70px;
         cursor: pointer;
         @include shadow(0, 10px, 6px, $dark-gray);
-        transform: scaleX(0);
-        transform-origin: 100% 50%; 
-        animation: items-display 0.5s $anim-del forwards infinite;
+        transform: scale(0) translateY(0);
+        transform-origin: 50% 100%; 
+        animation: items-display 0.5s $anim-del forwards;
         $anim-del: $anim-del + 0.3;
 
         section {

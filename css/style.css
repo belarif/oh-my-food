@@ -405,24 +405,25 @@ footer i {
 }
 @keyframes items-display {
   0% {
-    transform: none;
+    transform: translateY(0);
   }
   100% {
-    transform: none;
+    transform: translateY(-14px);
   }
 }
 .menu article li:nth-child(1) {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 0.2s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 0.2s forwards;
 }
 .menu article li:nth-child(1) section {
   padding: 14px;
@@ -472,14 +473,15 @@ footer i {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 0.5s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 0.5s forwards;
 }
 .menu article li:nth-child(2) section {
   padding: 14px;
@@ -529,14 +531,15 @@ footer i {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 0.8s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 0.8s forwards;
 }
 .menu article li:nth-child(3) section {
   padding: 14px;
@@ -586,14 +589,15 @@ footer i {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 1.1s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 1.1s forwards;
 }
 .menu article li:nth-child(4) section {
   padding: 14px;
@@ -643,14 +647,15 @@ footer i {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 1.4s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 1.4s forwards;
 }
 .menu article li:nth-child(5) section {
   padding: 14px;
@@ -700,14 +705,15 @@ footer i {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 22px;
   border-radius: 20px;
   background-color: #fff;
   max-height: 70px;
   cursor: pointer;
   box-shadow: 0 10px 6px #eeeded;
-  transform: scaleX(0);
-  transform-origin: 100% 50%;
-  animation: items-display 0.5s 1.7s forwards infinite;
+  transform: scale(0) translateY(0);
+  transform-origin: 50% 100%;
+  animation: items-display 0.5s 1.7s forwards;
 }
 .menu article li:nth-child(6) section {
   padding: 14px;
