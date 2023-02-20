@@ -84,7 +84,6 @@
         cursor: pointer;
         @include shadow(0, 10px, 6px, $dark-gray);
         transform: scale(0) translateY(0);
-        transform-origin: 50% 100%; 
         animation: items-display 0.5s $anim-del forwards;
         $anim-del: $anim-del + 0.3;
 
