@@ -4,7 +4,8 @@
   "description": "Ohmyfood est 100% mobile, elle permet de choisir son plat avant d'arriver au restaurant",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "compressed-sass": "sass --style compressed ./sass/main.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
