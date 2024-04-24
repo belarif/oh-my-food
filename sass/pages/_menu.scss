@@ -92,7 +92,7 @@
           text-align: start;
           width: 100%;
           overflow: hidden;
-      
+
           h3,
           p {
             overflow: hidden;
@@ -120,7 +120,7 @@
           transform: scaleX(0);
           transform-origin: right center;
           transition: all 500ms ease-in-out;
-          
+
           i {
             color: $white;
             font-size: 1.6rem;
@@ -139,7 +139,6 @@
             transform: rotate(1turn);
           }
         }
-
       }
     }
 
@@ -156,7 +155,7 @@
   h1,
   h3,
   p {
-      margin: 0;
+    margin: 0;
   }
 
   header {
@@ -209,4 +208,3 @@
     text-align: center;
   }
 }
-
